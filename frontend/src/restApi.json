@@ -25,75 +25,157 @@
                 "id": 1,
                 "image": "./dinner1.jpeg",
                 "title": "ROASTED LAMB RUMP",
-                "category": "Dinner"
+                "category": "Dinner",
+                "price": 599
             },
             {
                 "id": 2,
                 "image": "./dinner2.png",
                 "title": "CITRUS CURED SALMON",
-                "category": "Dinner"
+                "category": "Dinner",
+                "price": 549
             },
             {
                 "id": 3,
                 "image": "./breakfast1.png",
                 "title": "PAN SEARED SEA BASS",
-                "category": "Breakfast"
+                "category": "Breakfast",
+                "price": 449
             },
             {
                 "id": 4,
                 "image": "./dinner3.png",
                 "title": "STUFFED STRAWBERRY",
-                "category": "Dinner"
+                "category": "Dinner",
+                "price": 299
             },
             {
                 "id": 5,
                 "image": "./lunch1.png",
                 "title": "BEEF BURGER MEAL",
-                "category": "Lunch"
+                "category": "Lunch",
+                "price": 349
             },
             {
                 "id": 6,
                 "image": "./dinner4.png",
                 "title": "MUSSELS SOUP",
-                "category": "Dinner"
+                "category": "Dinner",
+                "price": 399
             },
             {
                 "id": 7,
                 "image": "./dinner5.png",
                 "title": "ITALIAN SPAGHETTI",
-                "category": "Dinner"
+                "category": "Dinner",
+                "price": 379
             },
             {
                 "id": 8,
                 "image": "./dinner6.png",
                 "title": "GRILLED FISH",
-                "category": "Dinner"
+                "category": "Dinner",
+                "price": 479
             }
         ],
         "team": [
             {
                 "id": 1,
-                "image": "./team_member_1.png",
-                "name": "JOHNATHAN TYLER",
-                "designation": "Founder & Head Chef"
+                "image": "https://www.superprof.co.in/blog/wp-content/uploads/2018/03/20161219132635-sanjeev-kapoor-editedvvv.jpeg/?name=Sanjeev+Kapoor&size=400&background=8B4513&color=fff&bold=true&font-size=0.33",
+                "name": "SANJEEV KAPOOR",
+                "designation": "India's Most Loved Celebrity Chef",
+                "experience": "35+ Years",
+                "specialty": "North Indian & Continental",
+                "restaurant": "The Yellow Chilli",
+                "location": "Mumbai, India",
+                "awards": ["Padma Shri", "National Award for Culinary Excellence"],
+                "bio": "Sanjeev Kapoor is one of India's most iconic chefs, known for making gourmet cooking accessible to millions through Khana Khazana. His warm style and innovative recipes have inspired home cooks across the country for decades.",
+                "signatureDishes": ["Butter Chicken", "Dal Makhani", "Hyderabadi Biryani"],
+                "rating": 4.9
             },
             {
                 "id": 2,
-                "image": "./team_member_2.png",
-                "name": "WADE WARREN",
-                "designation": "Sous Chef"
+                "image": "https://www.anokhilife.com/wp-content/uploads/images/blog_articles/VIKAS-II_156.jpg?name=Vikas+Khanna&size=400&background=1a1a2e&color=fff&bold=true&font-size=0.33",
+                "name": "VIKAS KHANNA",
+                "designation": "Michelin Star Chef & Author",
+                "experience": "30+ Years",
+                "specialty": "Progressive Indian Cuisine",
+                "restaurant": "Junoon NYC",
+                "location": "New York, USA",
+                "awards": ["Michelin Star", "GQ India Man of the Year"],
+                "bio": "Vikas Khanna is a globally celebrated chef who brought Indian fine dining to the world stage. From Amritsar to New York, his journey reflects passion, resilience, and a deep respect for Indian culinary heritage.",
+                "signatureDishes": ["Truffle Naan", "Tandoori Lamb Chops", "Kashmiri Rogan Josh"],
+                "rating": 4.8
             },
             {
                 "id": 3,
-                "image": "./team_member_3.png",
-                "name": "JHON DOE",
-                "designation": "Fast Food Chef"
+                "image": "https://im.rediff.com/getahead/2015/mar/27chef-ranveer-brar-1.jpg?w=670&h=900?name=Ranveer+Brar&size=400&background=2d5016&color=fff&bold=true&font-size=0.33",
+                "name": "RANVEER BRAR",
+                "designation": "MasterChef India Judge & Food Historian",
+                "experience": "25+ Years",
+                "specialty": "Awadhi & Street Food Fusion",
+                "restaurant": "TAG Gourmet Kitchen",
+                "location": "Lucknow, India",
+                "awards": ["Best Chef Award - Food Food", "Culinary Ambassador of India"],
+                "bio": "Ranveer Brar is renowned for blending traditional Indian flavors with modern techniques. His deep knowledge of food history and charismatic storytelling make him one of India's most respected culinary voices.",
+                "signatureDishes": ["Galouti Kebab", "Lucknowi Biryani", "Nihari"],
+                "rating": 4.8
             },
             {
                 "id": 4,
-                "image": "./team_member_4.png",
-                "name": "ALEX COAL",
-                "designation": "Senior Chef"
+                "image": "https://www.globalindian.com/wp-content/uploads/2021/09/atul-kochhar4.jpg?name=Atul+Kochhar&size=400&background=4a0e0e&color=fff&bold=true&font-size=0.33",
+                "name": "ATUL KOCHHAR",
+                "designation": "First Indian Chef with Michelin Star",
+                "experience": "28+ Years",
+                "specialty": "Modern Indian & British Fusion",
+                "restaurant": "Benares London",
+                "location": "London, UK",
+                "awards": ["Michelin Star (2007)", "BBC Great British Menu Winner"],
+                "bio": "Atul Kochhar made history as the first Indian chef to receive a Michelin star. He masterfully combines classical European techniques with bold Indian spices, setting new standards for Indian cuisine worldwide.",
+                "signatureDishes": ["Tandoori Salmon", "Lamb Rogan Josh", "Spiced Chocolate Tart"],
+                "rating": 4.7
+            },
+            {
+                "id": 5,
+                "image": "https://theideaslab.com/wp-content/uploads/2017/08/MM6-1920x1280.jpg?name=Manish+Mehrotra&size=400&background=3d2b1f&color=fff&bold=true&font-size=0.33",
+                "name": "MANISH MEHROTRA",
+                "designation": "Pioneer of Modern Indian Dining",
+                "experience": "22+ Years",
+                "specialty": "Contemporary Indian Fine Dining",
+                "restaurant": "Indian Accent",
+                "location": "New Delhi, India",
+                "awards": ["Asia's 50 Best Restaurants", "Best Chef India Award"],
+                "bio": "Manish Mehrotra revolutionized Indian fine dining with Indian Accent, where traditional recipes are reimagined with global ingredients and artistic presentation. He is a true innovator of modern Indian gastronomy.",
+                "signatureDishes": ["Blue Cheese Naan", "Meen Moilee", "Daulat Ki Chaat"],
+                "rating": 4.9
+            },
+            {
+                "id": 6,
+                "image": "https://static.zoomnews.com/thumb/msid-100437484,width-1280,height-720,resizemode-75/100437484.jpg?name=Tarla+Dalal&size=400&background=6b2d5c&color=fff&bold=true&font-size=0.33",
+                "name": "TARLA DALAL",
+                "designation": "Queen of Indian Vegetarian Cooking",
+                "experience": "40+ Years",
+                "specialty": "Vegetarian & Gujarati Cuisine",
+                "restaurant": "Tarla Dalal's Kitchen",
+                "location": "Mumbai, India",
+                "awards": ["Padma Shri", "Over 100 Cookbooks Published"],
+                "bio": "Tarla Dalal is a legendary figure in Indian cooking, beloved for her simple, healthy vegetarian recipes. She authored over 100 cookbooks and taught generations of Indians to cook with confidence and joy.",
+                "signatureDishes": ["Dhokla", "Paneer Butter Masala", "Gujarati Thali"],
+                "rating": 5.0
+            },
+            {
+                "id": 7,
+                "image": "https://ui-avatars.com/api/?name=Anu+Sharma&size=400&background=1a2b3c&color=fff&bold=true&font-size=0.33",
+                "name": "ANU SHARMA",
+                "designation": "Celebrity Pastry Chef",
+                "experience": "18+ Years",
+                "specialty": "Desserts & Baking",
+                "restaurant": "Sweet Atelier",
+                "location": "Bengaluru, India",
+                "awards": ["National Pastry Champion", "Best Dessert Chef Award"],
+                "bio": "Anu Sharma is celebrated for her creative desserts and elegant pastry creations, bringing a modern twist to classic Indian sweets.",
+                "signatureDishes": ["Raspberry Saffron Millefeuille", "Chocolate Samosa", "Rose Pistachio Macarons"],
+                "rating": 4.9
             }
         ],
         "testimonials": [
@@ -159,7 +241,7 @@
             },
             {
                 "id": 4,
-                "title": "TEAM",
+                "title": "CHEFS",
                 "link": "team"
             },
             {

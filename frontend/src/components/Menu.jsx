@@ -1,29 +1,52 @@
-import React from 'react'
-import {data} from '../restApi.json'
-const Menu = () => {
-  return (
-    <>
-      <section className='menu' id='menu'>
-        <div className="container">
-            <div className="heading_section">
-                <h1 className="heading">POPULAR DISHES</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga, iusto dolorem! Voluptatibus ipsum nam mollitia architecto. Soluta pariatur eius et recusandae veritatis. Quasi, et molestias!</p>
-            </div>
-            <div className="dishes_container">
-                {
-                    data[0].dishes.map(element => (
-                        <div className="card" key={element.id}>
-                                <img src={element.image} alt={element.title} />
-                                <h3>{element.title}</h3>
-                                <button>{element.category}</button>
-                        </div>
-                    ))
-                }   
-            </div>
-        </div>
-      </section>
-    </>
-  )
-}
+import React from "react";
+import { data } from "../restApi.json";
+import { useNavigate } from "react-router-dom";
 
-export default Menu
+const Menu = () => {
+  const navigate = useNavigate();
+
+  const handleOrder = (dish) => {
+    navigate("/order", { state: dish });
+  };
+
+  return (
+    <section className="menu" id="menu">
+      <div className="container">
+        <div className="heading_section">
+          <span>OUR SPECIAL MENU</span>
+          <h1 className="heading">Popular Dishes</h1>
+          <p>
+            Discover our chef&apos;s carefully selected dishes made with fresh
+            ingredients and authentic flavors.
+          </p>
+        </div>
+
+        <div className="dishes_container">
+          {data[0].dishes.map((dish) => (
+            <div className="card" key={dish.id}>
+              <div className="image-box">
+                <img src={dish.image} alt={dish.title} />
+                <span className="dish-badge">{dish.category}</span>
+              </div>
+
+              <div className="card-content">
+                <h3>{dish.title}</h3>
+
+                <p>
+                  Delicious freshly prepared dish from our special menu.
+                </p>
+
+                <div className="card-footer">
+                  <h4>₹{dish.price}</h4>
+                  <button onClick={() => handleOrder(dish)}>Order Now</button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Menu;

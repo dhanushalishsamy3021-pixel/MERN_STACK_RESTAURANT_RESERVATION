@@ -1,35 +1,89 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import { FaCheckCircle } from "react-icons/fa";
+
 const Success = () => {
   const [countdown, setCountdown] = useState(10);
   const navigate = useNavigate();
+  const location = useLocation();
+  const details = location.state;
+
+  const isReservation = details?.type === "reservation";
+  const isOrder = details?.type === "order";
 
   useEffect(() => {
     const timeoutId = setInterval(() => {
-      setCountdown((preCount) => {
-        if (preCount === 1) {
+      setCountdown((prev) => {
+        if (prev === 1) {
           clearInterval(timeoutId);
           navigate("/");
         }
-        return preCount - 1;
+        return prev - 1;
       });
     }, 1000);
+
     return () => clearInterval(timeoutId);
   }, [navigate]);
 
   return (
-    <>
-      <section className="notFound">
-        <div className="container">
-          <img src="/sandwich.png" alt="success" />
-          <h1>Redirecting to Home in {countdown} seconds...</h1>
-          <Link to={"/"}>
-            Back to Home <HiOutlineArrowNarrowRight />
-          </Link>
+    <section className="success-page">
+      <div className="container">
+        <FaCheckCircle className="success-icon" />
+
+        <h1>
+          {isReservation
+            ? "Table Reserved Successfully!"
+            : "Order Successfully Placed!"}
+        </h1>
+
+        <p>Thank you for choosing Flavour Restaurant.</p>
+
+        <div className="order-info">
+          {isOrder && (
+            <>
+              <h3>Order ID: #{details.orderId}</h3>
+              <p>
+                {details.dishName} × {details.quantity}
+              </p>
+              <p>Total: ₹{details.totalAmount}</p>
+            </>
+          )}
+
+          {isReservation && (
+            <>
+              <h3>Reservation for {details.name}</h3>
+              <p>
+                Date: {details.date} at {details.time}
+              </p>
+              <p>Guests: {details.guests}</p>
+            </>
+          )}
+
+          {!isOrder && !isReservation && (
+            <>
+              <h3>Request Confirmed</h3>
+              <p>Estimated Preparation Time: 20-30 Minutes</p>
+            </>
+          )}
+
+          <p className="status-note">
+            {isReservation
+              ? "We look forward to welcoming you!"
+              : "Our chef has started preparing your meal."}
+          </p>
         </div>
-      </section>
-    </>
+
+        <p className="countdown">
+          Redirecting to Home in {countdown} seconds...
+        </p>
+
+        <Link to="/" className="success-link">
+          Back to Home
+          <HiOutlineArrowNarrowRight />
+        </Link>
+      </div>
+    </section>
   );
 };
 
